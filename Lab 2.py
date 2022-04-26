@@ -1,7 +1,7 @@
 # Task 1
 # function map()
 # .split() to make a gap
-"""a, b, c, d, e = map(int,input("Введіть ціле число:\n").split())
+a, b, c, d, e = map(int,input("Введіть ціле число:\n").split())
 # find maximum value using max()
 M = max(a, b, c, d, e)
 print(M)
@@ -48,4 +48,42 @@ elif kind_of_year == 6 and 7 and 8:
 elif kind_of_year == 9 and 10 and 11:
     print("Осінь")
 else:
-    print("Невірний номер місяця")"""
+    print("Невірний номер місяця")
+#Task 5
+n = str(input("Введіть натуральне число:\n"))
+n1 = set(n)
+l1 = len(n)
+l2 = len(n1)
+if l1 == l2:
+    print("Ні")
+else:
+    print("Так")
+#Task 6
+m = (i for i in range(10000, 99999))
+for m in m:
+    if ((m % 133) == 125) and ((m % 134) == 111):
+        print(m)
+#Task 7
+for i in range(100, 1000):
+    sum = 0
+    for s in range(0, 3):
+        i = str(i)
+        sum = sum + int(i[s]) ** 3
+        i = int(i)
+    if sum == i:
+        print(i)
+n = input("Введіть рядок: ")
+l = n.split(" ")
+l.append("")
+
+i = 0
+a = 0
+b = 0
+while l[i] != "":
+    if len(l[i]) > b:
+        b = len(l[i])
+        a = l[i]
+    i += 1
+print(a, "довжина ", b)
+
+
